@@ -51,13 +51,13 @@ async fn main() -> Result<(), Error> {
         strict,
         verbose,
     } = Opt::parse();
-    println!("profile name: {:?}", profile);
     // println!("region: {:?}", region);
     // println!("strict:{}", strict);
     // println!("verbose:{}", verbose);
 
     // The name of the credentials profile you want to load
     let profile = profile.unwrap();
+    println!("profile name: {:?}", profile);
     let credentials_provider = ProfileFileCredentialsProvider::builder()
         .profile_name(profile)
         .build();
