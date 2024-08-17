@@ -43,7 +43,7 @@ struct Opt {
 /// * `[-v]` - Whether to display additional information.
 #[tokio::main]
 async fn main() -> Result<(), Error> {
-    tracing_subscriber::fmt::init();
+    // tracing_subscriber::fmt::init();
 
     let Opt {
         profile,
